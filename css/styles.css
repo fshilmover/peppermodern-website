@@ -370,127 +370,77 @@ img[loading="lazy"].loaded {
     }
 }
 
-/* Corner Ribbon Banner */
-.corner-ribbon {
+/* Launch Banner */
+.launch-banner {
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 20px;
+    right: 20px;
     z-index: 1000;
-    overflow: hidden;
-    width: 120px;
-    height: 120px;
-    text-align: right;
-    pointer-events: none;
-}
-
-.corner-ribbon-content {
-    font-family: var(--font-primary);
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.5px;
-    line-height: 1.3;
-    transform: rotate(45deg);
+    width: 200px;
+    height: 60px;
     background: #FF6B35;
+    border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    position: relative;
-    padding: 12px 0;
-    top: 25px;
-    right: -30px;
-    width: 150px;
-    pointer-events: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: var(--font-primary);
+    padding: 10px;
 }
 
-.corner-ribbon-content:before,
-.corner-ribbon-content:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 0;
-    height: 0;
-}
-
-.corner-ribbon-content:before {
-    left: 0;
-    border-left: 3px solid transparent;
-    border-right: 3px solid #d64a26;
-    border-top: 3px solid #d64a26;
-    border-bottom: 3px solid transparent;
-}
-
-.corner-ribbon-content:after {
-    right: 0;
-    border-left: 3px solid #d64a26;
-    border-right: 3px solid transparent;
-    border-top: 3px solid #d64a26;
-    border-bottom: 3px solid transparent;
-}
-
-.corner-ribbon-main {
-    display: block;
-    font-size: 13px;
+.banner-text-main {
+    font-size: 14px;
     font-weight: var(--font-weight-bold);
     color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
     margin-bottom: 2px;
-    white-space: nowrap;
 }
 
-.corner-ribbon-sub {
-    display: block;
-    font-size: 10px;
-    font-weight: var(--font-weight-medium);
+.banner-text-sub {
+    font-size: 12px;
+    font-weight: var(--font-weight-normal);
     color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    white-space: nowrap;
+    line-height: 1.2;
 }
 
-/* Mobile responsive ribbon */
+/* Mobile responsive banner */
 @media (max-width: 768px) {
-    .corner-ribbon {
-        width: 100px;
-        height: 100px;
+    .launch-banner {
+        width: 160px;
+        height: 50px;
+        top: 15px;
+        right: 15px;
+        padding: 8px;
     }
     
-    .corner-ribbon-content {
-        top: 20px;
-        right: -25px;
-        width: 125px;
-        padding: 10px 0;
+    .banner-text-main {
+        font-size: 12px;
     }
     
-    .corner-ribbon-main {
-        font-size: 11px;
-    }
-    
-    .corner-ribbon-sub {
-        font-size: 9px;
+    .banner-text-sub {
+        font-size: 10px;
     }
 }
 
 @media (max-width: 480px) {
-    .corner-ribbon {
-        width: 85px;
-        height: 85px;
+    .launch-banner {
+        width: 140px;
+        height: 45px;
+        top: 10px;
+        right: 10px;
+        padding: 6px;
     }
     
-    .corner-ribbon-content {
-        top: 18px;
-        right: -22px;
-        width: 110px;
-        padding: 8px 0;
+    .banner-text-main {
+        font-size: 11px;
+        letter-spacing: 0.3px;
     }
     
-    .corner-ribbon-main {
-        font-size: 10px;
-    }
-    
-    .corner-ribbon-sub {
-        font-size: 8px;
+    .banner-text-sub {
+        font-size: 9px;
     }
 }
 
