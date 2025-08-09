@@ -241,6 +241,13 @@ img[loading="lazy"].loaded {
     letter-spacing: -0.02em;
 }
 
+.turnaround-highlight {
+    color: #FFE066;
+    font-weight: var(--font-weight-bold);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    display: inline-block;
+}
+
 .hero-subtitle {
     font-size: 1.4rem;
     color: white;
@@ -1090,6 +1097,12 @@ img[loading="lazy"].loaded {
         font-size: 2.5rem;
         line-height: 1.2;
         margin-bottom: 1.5rem;
+    }
+    
+    .turnaround-highlight {
+        display: block;
+        margin-top: 0.5rem;
+        font-size: 2.2rem;
     }
     
     .hero-subtitle {
