@@ -362,14 +362,11 @@
                         <h3>Schedule Your Consultation</h3>
                         <p>Book a free 30-minute consultation to discuss your project requirements and get an accurate quote.</p>
                         
-                        <div class="booking-widget" id="booking-widget-container">
-                            <!-- Reclaim.ai widget will load here -->
-                            <div id="reclaim-widget-placeholder">
-                                <a href="https://app.reclaim.ai/m/freds/flexible-quick-meeting" target="_blank" class="btn btn-primary btn-large" id="booking-fallback">
-                                    Book Consultation
-                                </a>
-                                <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Click to schedule your free consultation</p>
-                            </div>
+                        <div class="booking-widget">
+                            <a href="https://app.reclaim.ai/m/freds/flexible-quick-meeting" target="_blank" class="btn btn-primary btn-large">
+                                Book Consultation
+                            </a>
+                            <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Click to schedule your free consultation</p>
                         </div>
                     </div>
                 </div>
@@ -483,30 +480,5 @@
 
     <script src="js/main.js"></script>
     
-    <!-- Reclaim.ai Booking Widget -->
-    <div><script src="https://meet.reclaimai.com/scripts/embed-scheduling-link.0.x.x.js" data-id="88fb8360-7463-4e92-b527-3cb79455dd13" data-redirect="NONE"></script></div>
-    
-    <!-- Reclaim.ai Widget Initialization -->
-    <script>
-        // Check if Reclaim.ai widget loaded successfully
-        setTimeout(function() {
-            // If the widget script loaded, it should create content in the booking widget container
-            var widgetContainer = document.getElementById('booking-widget-container');
-            var placeholder = document.getElementById('reclaim-widget-placeholder');
-            
-            // Look for any Reclaim.ai generated content
-            var reclaimWidget = widgetContainer.querySelector('iframe, [data-reclaim], .reclaim-widget');
-            
-            if (reclaimWidget) {
-                // Widget loaded successfully, hide the fallback
-                if (placeholder) {
-                    placeholder.style.display = 'none';
-                }
-            } else {
-                // Widget failed to load, keep the fallback visible
-                console.log('Reclaim.ai widget failed to load, using fallback link');
-            }
-        }, 3000); // Wait 3 seconds for widget to load
-    </script>
 </body>
 </html>
