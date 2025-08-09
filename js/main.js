@@ -121,11 +121,45 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe service cards and pricing cards
-    const cards = document.querySelectorAll('.service-card, .pricing-card');
+    const cards = document.querySelectorAll('.service-card, .pricing-card, .expandable-service-card');
     cards.forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(card);
     });
+
+    // Expandable service cards functionality
+    const expandableCards = document.querySelectorAll('.expandable-service-card');
+    expandableCards.forEach(card => {
+        const expandBtn = card.querySelector('.expand-btn');
+        const details = card.querySelector('.service-card-details');
+        
+        if (expandBtn && details) {
+            expandBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleCardExpansion(card, details);
+            });
+            
+            // Also allow clicking the entire card to expand
+            card.addEventListener('click', function() {
+                toggleCardExpansion(card, details);
+            });
+        }
+    });
+
+    function toggleCardExpansion(card, details) {
+        const isExpanded = card.classList.contains('expanded');
+        
+        if (isExpanded) {
+            // Collapse the card
+            card.classList.remove('expanded');
+            details.style.maxHeight = '0';
+        } else {
+            // Expand the card
+            card.classList.add('expanded');
+            // Calculate the full height of the content
+            details.style.maxHeight = details.scrollHeight + 'px';
+        }
+    }
 });
