@@ -370,6 +370,79 @@ img[loading="lazy"].loaded {
     }
 }
 
+/* Corner Launch Banner */
+.corner-banner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    transform: rotate(45deg);
+    transform-origin: top right;
+    background: #FF6B35;
+    color: white;
+    padding: 15px 60px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-family: var(--font-primary);
+    text-align: center;
+    width: 280px;
+    margin-top: 35px;
+    margin-right: -70px;
+}
+
+.corner-banner-content {
+    transform: rotate(-45deg);
+    line-height: 1.2;
+}
+
+.corner-banner-main {
+    font-size: 14px;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.corner-banner-sub {
+    font-size: 11px;
+    font-weight: var(--font-weight-medium);
+    opacity: 0.95;
+}
+
+/* Mobile responsive banner */
+@media (max-width: 768px) {
+    .corner-banner {
+        width: 220px;
+        padding: 12px 45px;
+        margin-top: 28px;
+        margin-right: -55px;
+    }
+    
+    .corner-banner-main {
+        font-size: 12px;
+    }
+    
+    .corner-banner-sub {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .corner-banner {
+        width: 180px;
+        padding: 10px 35px;
+        margin-top: 22px;
+        margin-right: -45px;
+    }
+    
+    .corner-banner-main {
+        font-size: 11px;
+    }
+    
+    .corner-banner-sub {
+        font-size: 9px;
+    }
+}
+
 /* Pricing Section */
 .pricing {
     padding: 80px 0;
