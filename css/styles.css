@@ -811,101 +811,82 @@ img[loading="lazy"].loaded {
     background: var(--bg-light);
 }
 
-/* Enhanced Booking Section */
-.enhanced-booking-section {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-    border-radius: 16px;
-    padding: 3rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+/* Consultation CTA Section */
+.consultation-cta {
+    background: #f8f9fa;
+    padding: 80px 0;
 }
 
-.booking-content-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.booking-text h2 {
+.consultation-cta h2 {
     color: var(--primary-color);
     font-size: 2.2rem;
     font-weight: var(--font-weight-bold);
     margin-bottom: 1rem;
-    line-height: 1.2;
     text-align: left;
 }
 
-.booking-text h3 {
+.consultation-cta .subtitle {
     color: var(--text-light);
     font-size: 1.3rem;
-    font-weight: var(--font-weight-normal);
     margin-bottom: 2rem;
-    line-height: 1.4;
     text-align: left;
 }
 
-.consultation-benefits {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    margin-bottom: 1rem;
+.benefits-list {
+    margin-bottom: 3rem;
 }
 
 .benefit-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 1.1rem;
-    color: var(--text-dark);
+    display: block;
+    margin-bottom: 1rem;
     text-align: left;
 }
 
-.benefit-icon {
-    width: 32px;
-    height: 32px;
+.checkmark {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
     background: var(--accent-color);
     color: white;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    font-weight: var(--font-weight-bold);
-    flex-shrink: 0;
-}
-
-.booking-cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-    margin-top: 1rem;
+    line-height: 24px;
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-bold);
+    margin-right: 1rem;
+    vertical-align: middle;
 }
 
-.btn-consultation {
-    background: linear-gradient(135deg, var(--accent-color), #4a7bc8);
+.benefit-text {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    vertical-align: middle;
+}
+
+.cta-wrapper {
+    text-align: center;
+}
+
+.consultation-btn {
+    display: inline-block;
+    background: var(--accent-color);
     color: white;
     font-size: 1.2rem;
     font-weight: var(--font-weight-semibold);
-    padding: 1.25rem 2.5rem;
-    border-radius: 12px;
+    padding: 1rem 2rem;
+    border-radius: 8px;
     text-decoration: none;
-    box-shadow: 0 6px 20px rgba(44, 90, 160, 0.3);
-    transition: all 0.3s ease;
     margin-bottom: 1rem;
-    min-width: 280px;
+    transition: all 0.3s ease;
 }
 
-.btn-consultation:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(44, 90, 160, 0.4);
-    background: linear-gradient(135deg, #4a7bc8, var(--accent-color));
+.consultation-btn:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
     color: white;
 }
 
-.urgency-text {
+.consultation-cta .urgency-text {
     color: var(--accent-color);
     font-weight: var(--font-weight-medium);
     font-size: 1rem;
@@ -1367,29 +1348,21 @@ img[loading="lazy"].loaded {
         gap: 2rem;
     }
     
-    .enhanced-booking-section {
-        padding: 2rem;
+    .consultation-cta {
+        padding: 60px 0;
     }
     
-    .booking-content-wrapper {
-        max-width: none;
-        padding: 0;
-    }
-    
-    .booking-text h2 {
+    .consultation-cta h2 {
         font-size: 1.8rem;
-        text-align: left;
     }
     
-    .booking-text h3 {
+    .consultation-cta .subtitle {
         font-size: 1.1rem;
-        text-align: left;
     }
     
-    .btn-consultation {
+    .consultation-btn {
         font-size: 1.1rem;
         padding: 1rem 2rem;
-        min-width: auto;
         width: 100%;
     }
     
@@ -1522,29 +1495,23 @@ img[loading="lazy"].loaded {
         padding: 1.5rem;
     }
     
-    .enhanced-booking-section {
-        padding: 1.5rem;
+    .consultation-cta {
+        padding: 50px 0;
     }
     
-    .booking-content-wrapper {
-        gap: 2rem;
-    }
-    
-    .booking-text h2 {
+    .consultation-cta h2 {
         font-size: 1.6rem;
-        text-align: left;
     }
     
-    .booking-text h3 {
-        font-size: 1rem;
-        text-align: left;
-    }
-    
-    .benefit-item {
+    .consultation-cta .subtitle {
         font-size: 1rem;
     }
     
-    .btn-consultation {
+    .benefit-text {
+        font-size: 1rem;
+    }
+    
+    .consultation-btn {
         font-size: 1rem;
         padding: 0.875rem 1.5rem;
     }
