@@ -385,22 +385,24 @@ img[loading="lazy"].loaded {
 
 .corner-ribbon-content {
     font-family: var(--font-primary);
-    font-size: 12px;
-    font-weight: var(--font-weight-bold);
     color: white;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.5px;
-    line-height: 1.2;
+    line-height: 1.3;
     transform: rotate(45deg);
     background: #FF6B35;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     position: relative;
-    padding: 10px 0;
+    padding: 12px 0;
     top: 25px;
     right: -30px;
     width: 150px;
     pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .corner-ribbon-content:before,
@@ -430,16 +432,21 @@ img[loading="lazy"].loaded {
 
 .corner-ribbon-main {
     display: block;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: var(--font-weight-bold);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     margin-bottom: 2px;
+    white-space: nowrap;
 }
 
 .corner-ribbon-sub {
     display: block;
-    font-size: 9px;
+    font-size: 10px;
     font-weight: var(--font-weight-medium);
-    opacity: 0.9;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
 }
 
 /* Mobile responsive ribbon */
@@ -450,10 +457,31 @@ img[loading="lazy"].loaded {
     }
     
     .corner-ribbon-content {
-        font-size: 10px;
         top: 20px;
         right: -25px;
         width: 125px;
+        padding: 10px 0;
+    }
+    
+    .corner-ribbon-main {
+        font-size: 11px;
+    }
+    
+    .corner-ribbon-sub {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 480px) {
+    .corner-ribbon {
+        width: 85px;
+        height: 85px;
+    }
+    
+    .corner-ribbon-content {
+        top: 18px;
+        right: -22px;
+        width: 110px;
         padding: 8px 0;
     }
     
@@ -463,29 +491,6 @@ img[loading="lazy"].loaded {
     
     .corner-ribbon-sub {
         font-size: 8px;
-    }
-}
-
-@media (max-width: 480px) {
-    .corner-ribbon {
-        width: 80px;
-        height: 80px;
-    }
-    
-    .corner-ribbon-content {
-        font-size: 9px;
-        top: 16px;
-        right: -20px;
-        width: 100px;
-        padding: 6px 0;
-    }
-    
-    .corner-ribbon-main {
-        font-size: 9px;
-    }
-    
-    .corner-ribbon-sub {
-        font-size: 7px;
     }
 }
 
