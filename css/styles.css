@@ -894,6 +894,104 @@ img[loading="lazy"].loaded {
     text-align: center;
 }
 
+/* Service Areas Section */
+.service-areas {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+
+.service-area-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.primary-service-area h3,
+.extended-service-area h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.location-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.location-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.location-icon {
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.location-info h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 0.5rem;
+}
+
+.location-info p {
+    color: var(--text-light);
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.cities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.city-item {
+    background: var(--bg-white);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.city-item:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.service-radius {
+    background: var(--bg-white);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.service-radius p {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.service-radius p:last-child {
+    margin-bottom: 0;
+}
+
+.service-radius strong {
+    color: var(--primary-color);
+}
+
 /* Future Services Section */
 .future-services {
     padding: 80px 0;
@@ -1366,6 +1464,19 @@ img[loading="lazy"].loaded {
         width: 100%;
     }
     
+    .service-area-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .cities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .service-radius {
+        padding: 1.5rem;
+    }
+    
     .future-services-callout {
         grid-template-columns: 1fr;
         padding: 2rem;
@@ -1460,8 +1571,22 @@ img[loading="lazy"].loaded {
     .map-section,
     .workshop,
     .portfolio,
-    .future-services {
+    .future-services,
+    .service-areas {
         padding: 60px 0;
+    }
+    
+    .cities-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .service-area-grid {
+        gap: 2rem;
+    }
+    
+    .location-list {
+        gap: 1.5rem;
     }
     
     .workshop-text h2,
