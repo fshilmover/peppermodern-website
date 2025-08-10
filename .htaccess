@@ -1,0 +1,18 @@
+# Set proper MIME type for XML files
+AddType application/xml .xml
+
+# Enable XML sitemap
+<Files "sitemap.xml">
+    Header set Content-Type "application/xml; charset=utf-8"
+</Files>
+
+# Enable robots.txt
+<Files "robots.txt">
+    Header set Content-Type "text/plain; charset=utf-8"
+</Files>
+
+# Cache control for sitemap
+<Files "sitemap.xml">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 day"
+</Files>
