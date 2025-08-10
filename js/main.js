@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScrollY = currentScrollY;
     });
 
-    // Add intersection observer for animations
+    // Add intersection observer for animations and section tracking
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -120,8 +120,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Observe service cards and pricing cards
-    const cards = document.querySelectorAll('.service-card, .pricing-card');
+    // Section tracking observer for GA4
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && typeof trackSectionView === 'function') {
+                const sectionId = entry.target.id || entry.target.className.split(' ')[0];
+                trackSectionView(sectionId);
+            }
+        });
+    }, {
+        threshold: 0.3,
+        rootMargin: '0px'
+    });
+
+    // Observe main sections for tracking
+    const mainSections = document.querySelectorAll('section[id], .hero, .services, .about, .contact, .lead-magnets');
+    mainSections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+
+    // Observe service cards and pricing cards for animations
+    const cards = document.querySelectorAll('.service-card, .pricing-card, .lead-magnet-card');
     cards.forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';

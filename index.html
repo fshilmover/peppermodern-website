@@ -36,16 +36,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NN3QPC3F8Q"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID', {
+        
+        gtag('config', 'G-NN3QPC3F8Q', {
             page_title: 'CNC Cabinet Cutting Mooresville NC',
             page_location: window.location.href,
-            custom_map: {'custom_parameter_1': 'lead_source'}
+            send_page_view: true
         });
         
         // Conversion tracking for form submissions
@@ -53,7 +54,8 @@
             gtag('event', 'form_submit', {
                 event_category: 'Lead Generation',
                 event_label: formType,
-                value: 1
+                value: 1,
+                currency: 'USD'
             });
         }
         
@@ -62,7 +64,35 @@
             gtag('event', 'consultation_booking', {
                 event_category: 'Lead Generation',
                 event_label: 'Consultation CTA',
-                value: 5
+                value: 5,
+                currency: 'USD'
+            });
+        }
+        
+        // Track phone number clicks
+        function trackPhoneCall() {
+            gtag('event', 'phone_call', {
+                event_category: 'Contact',
+                event_label: '980.288.5123',
+                value: 3
+            });
+        }
+        
+        // Track section visits
+        function trackSectionView(sectionName) {
+            gtag('event', 'section_view', {
+                event_category: 'Engagement',
+                event_label: sectionName
+            });
+        }
+        
+        // Enhanced e-commerce conversion tracking for lead magnets
+        function trackLeadMagnetDownload(magnetType) {
+            gtag('event', 'lead_magnet_download', {
+                event_category: 'Lead Magnet',
+                event_label: magnetType,
+                value: 2,
+                currency: 'USD'
             });
         }
     </script>
@@ -540,7 +570,7 @@
                             </div>
                             <div class="contact-item phone-highlight">
                                 <strong>📞 Call Us Today</strong>
-                                <p class="phone-number"><a href="tel:+19802885123">980.288.5123</a></p>
+                                <p class="phone-number"><a href="tel:+19802885123" onclick="trackPhoneCall()">980.288.5123</a></p>
                                 <small>We respond within 4 hours</small>
                             </div>
                             <div class="contact-item">
@@ -601,7 +631,7 @@
                     <!-- Enhanced Contact Form -->
                     <div class="quick-contact">
                         <h3>Project Inquiry</h3>
-                        <p>Ready to get started? Tell us about your project or <strong><a href="tel:+19802885123">call us at 980.288.5123</a></strong></p>
+                        <p>Ready to get started? Tell us about your project or <strong><a href="tel:+19802885123" onclick="trackPhoneCall()">call us at 980.288.5123</a></strong></p>
                         
                         <form class="contact-form" id="quickContactForm" onsubmit="trackFormSubmission('project_inquiry')">
                             <div class="form-group">
@@ -737,7 +767,7 @@
                     </div>
                     <h3>Cabinet Project Cost Calculator</h3>
                     <p>Get instant pricing estimates for your CNC cabinet cutting projects. Input your specs and get accurate cost breakdowns in minutes.</p>
-                    <form class="lead-magnet-form" onsubmit="trackFormSubmission('cost_calculator')">
+                    <form class="lead-magnet-form" onsubmit="trackFormSubmission('cost_calculator'); trackLeadMagnetDownload('cost_calculator');">
                         <input type="email" placeholder="Enter your email for instant access" required>
                         <button type="submit" class="btn btn-primary">Get Calculator</button>
                     </form>
@@ -749,7 +779,7 @@
                     </div>
                     <h3>Cabinet Parts Pricing Guide</h3>
                     <p>Comprehensive pricing guide covering sheet processing, edge banding, custom millwork, and turnaround times. Perfect for project planning.</p>
-                    <form class="lead-magnet-form" onsubmit="trackFormSubmission('pricing_guide')">
+                    <form class="lead-magnet-form" onsubmit="trackFormSubmission('pricing_guide'); trackLeadMagnetDownload('pricing_guide');">
                         <input type="email" placeholder="Enter your email for free guide" required>
                         <button type="submit" class="btn btn-primary">Download Guide</button>
                     </form>
@@ -761,7 +791,7 @@
                     </div>
                     <h3>Sample Portfolio</h3>
                     <p>See examples of our precision CNC work, cabinet assemblies, and edge banding quality. Perfect for showing clients what's possible.</p>
-                    <form class="lead-magnet-form" onsubmit="trackFormSubmission('sample_portfolio')">
+                    <form class="lead-magnet-form" onsubmit="trackFormSubmission('sample_portfolio'); trackLeadMagnetDownload('sample_portfolio');">
                         <input type="email" placeholder="Enter your email for portfolio access" required>
                         <button type="submit" class="btn btn-primary">View Portfolio</button>
                     </form>
