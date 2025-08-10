@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Allow all crawling for CNC cabinet cutting business
+# Peppermodern - Professional CNC Cabinet Manufacturing
+# Mooresville, NC - Serving Charlotte Metro Area
+
+# Sitemap location
+Sitemap: https://peppermodern.com/sitemap.xml
+
+# Allow indexing of images for local SEO
+Allow: /images/
+
+# Allow crawling of CSS and JS for better rendering
+Allow: /css/
+Allow: /js/
+
+# Crawl delay (optional - can be removed if not needed)
+# Crawl-delay: 1

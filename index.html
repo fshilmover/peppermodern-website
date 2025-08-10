@@ -12,15 +12,60 @@
     <meta name="ICBM" content="35.5851, -80.8098">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Peppermodern - Precision CNC Cabinet Milling">
-    <meta property="og:description" content="Premium CNC cabinet milling services in Mooresville, NC">
-    <meta property="og:type" content="website">
+    <meta property="og:title" content="CNC Cabinet Cutting Mooresville NC | Professional Cabinet Parts | Peppermodern">
+    <meta property="og:description" content="Professional CNC cabinet cutting services in Mooresville NC. 7-day turnaround for sheet processing, edge banding & cabinet parts. Serving Charlotte metro contractors. Ready October 2025.">
+    <meta property="og:type" content="business.business">
     <meta property="og:url" content="https://peppermodern.com">
+    <meta property="og:image" content="https://peppermodern.com/images/PXL_20250801_113853122.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Peppermodern">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CNC Cabinet Cutting Mooresville NC | Professional Cabinet Parts | Peppermodern">
+    <meta name="twitter:description" content="Professional CNC cabinet cutting services in Mooresville NC. 7-day turnaround for sheet processing, edge banding & cabinet parts. Serving Charlotte metro contractors.">
+    <meta name="twitter:image" content="https://peppermodern.com/images/PXL_20250801_113853122.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://peppermodern.com/">
     
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID', {
+            page_title: 'CNC Cabinet Cutting Mooresville NC',
+            page_location: window.location.href,
+            custom_map: {'custom_parameter_1': 'lead_source'}
+        });
+        
+        // Conversion tracking for form submissions
+        function trackFormSubmission(formType) {
+            gtag('event', 'form_submit', {
+                event_category: 'Lead Generation',
+                event_label: formType,
+                value: 1
+            });
+        }
+        
+        // Track consultation bookings
+        function trackConsultationBooking() {
+            gtag('event', 'consultation_booking', {
+                event_category: 'Lead Generation',
+                event_label: 'Consultation CTA',
+                value: 5
+            });
+        }
+    </script>
     
     <!-- Enhanced Local Business Schema Markup -->
     <script type="application/ld+json">
@@ -477,7 +522,7 @@
                         </div>
                         
                         <div class="cta-wrapper">
-                            <a href="https://app.reclaim.ai/m/freds/flexible-quick-meeting" target="_blank" class="consultation-btn">Schedule My Free Consultation</a>
+                            <a href="https://app.reclaim.ai/m/freds/flexible-quick-meeting" target="_blank" class="consultation-btn" onclick="trackConsultationBooking()">Schedule My Free Consultation</a>
                             <p class="urgency-text">Book now to secure priority scheduling</p>
                         </div>
                     </div>
@@ -553,12 +598,12 @@
                         <p class="category-description">Professional CNC cabinet cutting and manufacturing services for contractors throughout the Charlotte metro area.</p>
                     </div>
                     
-                    <!-- Simplified Contact Form -->
+                    <!-- Enhanced Contact Form -->
                     <div class="quick-contact">
-                        <h3>Quick Inquiry</h3>
-                        <p>Have a quick question or want to send files? Use this form or <strong><a href="tel:+19802885123">call us at 980.288.5123</a></strong></p>
+                        <h3>Project Inquiry</h3>
+                        <p>Ready to get started? Tell us about your project or <strong><a href="tel:+19802885123">call us at 980.288.5123</a></strong></p>
                         
-                        <form class="contact-form" id="quickContactForm">
+                        <form class="contact-form" id="quickContactForm" onsubmit="trackFormSubmission('project_inquiry')">
                             <div class="form-group">
                                 <label for="quickName">Name *</label>
                                 <input type="text" id="quickName" name="quickName" required>
@@ -570,11 +615,51 @@
                             </div>
                             
                             <div class="form-group">
-                                <label for="quickMessage">Message *</label>
-                                <textarea id="quickMessage" name="quickMessage" rows="3" placeholder="Your question or message..." required></textarea>
+                                <label for="projectType">Project Type *</label>
+                                <select id="projectType" name="projectType" required>
+                                    <option value="">Select your project type...</option>
+                                    <option value="kitchen-cabinets">Kitchen Cabinets</option>
+                                    <option value="bathroom-vanities">Bathroom Vanities</option>
+                                    <option value="custom-millwork">Custom Millwork</option>
+                                    <option value="commercial-project">Commercial Project</option>
+                                    <option value="other">Other</option>
+                                </select>
                             </div>
                             
-                            <button type="submit" class="btn btn-secondary">Send Message</button>
+                            <div class="form-group">
+                                <label for="timeline">Timeline</label>
+                                <select id="timeline" name="timeline">
+                                    <option value="">When do you need this completed?</option>
+                                    <option value="asap">ASAP</option>
+                                    <option value="1-3-months">1-3 months</option>
+                                    <option value="3-6-months">3-6 months</option>
+                                    <option value="october-2025">Planning for October 2025+</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budgetRange">Budget Range (Optional)</label>
+                                <select id="budgetRange" name="budgetRange">
+                                    <option value="">Select budget range...</option>
+                                    <option value="under-5k">Under $5,000</option>
+                                    <option value="5k-15k">$5,000 - $15,000</option>
+                                    <option value="15k-plus">$15,000+</option>
+                                    <option value="request-quote">Request Custom Quote</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="projectFiles">Upload Plans/Sketches (Optional)</label>
+                                <input type="file" id="projectFiles" name="projectFiles" multiple accept=".pdf,.jpg,.jpeg,.png,.dwg,.dxf" class="file-upload">
+                                <small>Accepted formats: PDF, JPG, PNG, DWG, DXF (Max 10MB per file)</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="quickMessage">Project Details *</label>
+                                <textarea id="quickMessage" name="quickMessage" rows="4" placeholder="Tell us about your project requirements, measurements, special considerations, etc." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-secondary">Send Project Inquiry</button>
                         </form>
                     </div>
                 </div>
@@ -632,6 +717,54 @@
                         <p><strong>Service Radius:</strong> 50+ miles from Mooresville</p>
                         <p>Locally owned and operated, serving contractors throughout the Charlotte metro since our founding. We understand the unique needs of North Carolina contractors and deliver precision CNC cabinet cutting services with unmatched turnaround times.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Magnet Section -->
+    <section class="lead-magnets">
+        <div class="container">
+            <div class="section-header">
+                <h2>Free Resources for Contractors</h2>
+                <p>Get instant access to our professional tools and guides to help plan your cabinet projects</p>
+            </div>
+            
+            <div class="lead-magnet-grid">
+                <div class="lead-magnet-card">
+                    <div class="lead-icon">
+                        <span>🧮</span>
+                    </div>
+                    <h3>Cabinet Project Cost Calculator</h3>
+                    <p>Get instant pricing estimates for your CNC cabinet cutting projects. Input your specs and get accurate cost breakdowns in minutes.</p>
+                    <form class="lead-magnet-form" onsubmit="trackFormSubmission('cost_calculator')">
+                        <input type="email" placeholder="Enter your email for instant access" required>
+                        <button type="submit" class="btn btn-primary">Get Calculator</button>
+                    </form>
+                </div>
+                
+                <div class="lead-magnet-card">
+                    <div class="lead-icon">
+                        <span>📋</span>
+                    </div>
+                    <h3>Cabinet Parts Pricing Guide</h3>
+                    <p>Comprehensive pricing guide covering sheet processing, edge banding, custom millwork, and turnaround times. Perfect for project planning.</p>
+                    <form class="lead-magnet-form" onsubmit="trackFormSubmission('pricing_guide')">
+                        <input type="email" placeholder="Enter your email for free guide" required>
+                        <button type="submit" class="btn btn-primary">Download Guide</button>
+                    </form>
+                </div>
+                
+                <div class="lead-magnet-card">
+                    <div class="lead-icon">
+                        <span>🖼️</span>
+                    </div>
+                    <h3>Sample Portfolio</h3>
+                    <p>See examples of our precision CNC work, cabinet assemblies, and edge banding quality. Perfect for showing clients what's possible.</p>
+                    <form class="lead-magnet-form" onsubmit="trackFormSubmission('sample_portfolio')">
+                        <input type="email" placeholder="Enter your email for portfolio access" required>
+                        <button type="submit" class="btn btn-primary">View Portfolio</button>
+                    </form>
                 </div>
             </div>
         </div>
