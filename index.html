@@ -85,16 +85,6 @@
                 event_label: sectionName
             });
         }
-        
-        // Enhanced e-commerce conversion tracking for lead magnets
-        function trackLeadMagnetDownload(magnetType) {
-            gtag('event', 'lead_magnet_download', {
-                event_category: 'Lead Magnet',
-                event_label: magnetType,
-                value: 2,
-                currency: 'USD'
-            });
-        }
     </script>
     
     <!-- Enhanced Local Business Schema Markup -->
@@ -291,7 +281,6 @@
             </div>
             <div class="nav-menu">
                 <a href="#services">Services</a>
-                <a href="#pricing">Pricing</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -309,8 +298,8 @@
                 <h1 class="hero-title">Professional CNC Cabinet Manufacturing <span class="turnaround-highlight">7 Day Turnaround</span></h1>
                 <p class="hero-subtitle">Charlotte metro contractors trust us for precision-cut cabinet parts. From consultation to finished components in one week - serving Mooresville, Lake Norman, and the greater Charlotte area.</p>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">Book a Consultation</a>
-                    <a href="#services" class="btn btn-secondary">Our Services</a>
+                    <a href="#contact" class="btn btn-primary" onclick="trackSectionView('hero_cta_primary')">Book a Consultation</a>
+                    <a href="#services" class="btn btn-secondary" onclick="trackSectionView('hero_cta_secondary')">Our Services</a>
                 </div>
             </div>
         </div>
@@ -344,26 +333,6 @@
                     <h3>Local Mooresville Location</h3>
                     <p>No shipping delays, easy coordination. Local pickup and delivery options throughout the Charlotte metro area.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Value Proposition Section -->
-    <section class="value-proposition">
-        <div class="container">
-            <div class="section-header">
-                <h2>Produce Precision Millwork That You Can Assemble and Install</h2>
-                <p>Improve the quality of your millwork while reducing your operational overhead by focusing on design, assembly and installation while we handle precision manufacturing at Peppermodern. Elevate your projects with precision craftsmanship from Mooresville's CNC experts.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fast Turnaround Section -->
-    <section class="fast-turnaround">
-        <div class="container">
-            <div class="section-header">
-                <h2>From Consultation to Finished Parts in Just 7 Days</h2>
-                <p>Our streamlined process takes your project from initial consultation to CNC cut and edge banded parts ready for assembly in one week. Fast turnaround without compromising precision.</p>
             </div>
         </div>
     </section>
@@ -428,420 +397,34 @@
         </div>
     </section>
 
-    <!-- Pre-Launch Booking Section -->
-    <section id="pricing" class="pre-launch">
+    <!-- Ready to Get Started CTA Section -->
+    <section id="contact" class="consultation-cta">
         <div class="container">
-            <div class="section-header">
-                <h2>Reserve Your Production Slot</h2>
-                <p>Book your projects in advance to secure priority scheduling when we launch. Early bookings receive consultation and project planning now, with production beginning soon.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Precision Meets Craftsmanship</h2>
-                    <p>Located in Mooresville, North Carolina, Peppermodern combines traditional woodworking expertise with cutting-edge CNC technology to deliver exceptional cabinet components and millwork.</p>
-                    <p>Our state-of-the-art CNC equipment ensures consistent quality, precise tolerances, and efficient production times, making us the trusted partner for contractors and cabinet makers throughout the Lake Norman area.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <strong>±0.5mm</strong>
-                            <span>Precision Tolerance</span>
-                        </div>
-                        <div class="stat">
-                            <strong>7 Days</strong>
-                            <span>Turnaround Time</span>
-                        </div>
-                        <div class="stat">
-                            <strong>October 2025</strong>
-                            <span>Launch Date</span>
-                        </div>
-                    </div>
+            <h2>Ready to Get Started?</h2>
+            <p class="subtitle">Get your precision cabinet parts quote in 24 hours</p>
+            
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <span class="checkmark">✓</span>
+                    <span class="benefit-text">Free 30-minute consultation</span>
                 </div>
-                <div class="about-image">
-                    <img src="images/PXL_20250803_133132027.jpg" alt="Peppermodern CNC cabinet manufacturing facility exterior on South Main Street Mooresville NC" loading="lazy">
+                <div class="benefit-item">
+                    <span class="checkmark">✓</span>
+                    <span class="benefit-text">Custom quote with detailed pricing</span>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Workshop Section -->
-    <section class="workshop">
-        <div class="container">
-            <div class="workshop-content">
-                <div class="workshop-image">
-                    <img src="images/PXL_20250803_133438672.jpg" alt="Professional CNC cabinet workshop interior with dust collection system serving Charlotte metro contractors" loading="lazy">
+                <div class="benefit-item">
+                    <span class="checkmark">✓</span>
+                    <span class="benefit-text">Timeline planning for October 2025 launch</span>
                 </div>
-                <div class="workshop-text">
-                    <h2>Professional Workshop</h2>
-                    <p>Our state-of-the-art facility features industrial-grade dust collection systems, organized material storage, and a clean, efficient workspace designed for precision manufacturing.</p>
-                    <p>We maintain a fully stocked inventory of premium plywood, MDF, and melamine materials, ensuring quick turnaround times for your projects.</p>
-                    <div class="workshop-features">
-                        <div class="feature">
-                            <h4>Dust Collection</h4>
-                            <p>Industrial-grade systems keep the workspace clean and safe</p>
-                        </div>
-                        <div class="feature">
-                            <h4>Material Storage</h4>
-                            <p>Organized inventory of premium cabinet materials</p>
-                        </div>
-                        <div class="feature">
-                            <h4>Quality Control</h4>
-                            <p>Systematic processes ensure consistent results</p>
-                        </div>
-                    </div>
+                <div class="benefit-item">
+                    <span class="checkmark">✓</span>
+                    <span class="benefit-text">Technical file review and optimization</span>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2>Craftsmanship in Action</h2>
-                <p>See the precision and quality that goes into every Peppermodern cabinet component</p>
-            </div>
-            <div class="portfolio-showcase">
-                <div class="portfolio-item">
-                    <img src="images/PXL_20250803_134632969.jpg" alt="Custom cabinet with precision-cut parts and edge banding from Peppermodern Mooresville NC CNC services" loading="lazy">
-                    <div class="portfolio-caption">
-                        <h3>Custom Cabinet Assembly</h3>
-                        <p>Precision-cut components with flawless edge banding and hardware installation, showcasing the quality achievable with our CNC manufacturing process.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contact Peppermodern Today</h2>
-                <p>Reach out for CNC cabinet cutting Mooresville NC and custom cabinet parts Charlotte solutions. Book an advance consultation to discuss your project requirements and secure your production slot for our upcoming launch. Proudly serving contractors throughout the Charlotte metro and Lake Norman area.</p>
             </div>
             
-            <div class="contact-layout">
-                <!-- Consultation CTA Section -->
-                <section class="consultation-cta">
-                    <div>
-                        <h2>Ready to Get Started?</h2>
-                        <p class="subtitle">Get your precision cabinet parts quote in 24 hours</p>
-                        
-                        <div class="benefits-list">
-                            <div class="benefit-item">
-                                <span class="checkmark">✓</span>
-                                <span class="benefit-text">Free 30-minute consultation</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="checkmark">✓</span>
-                                <span class="benefit-text">Custom quote</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="checkmark">✓</span>
-                                <span class="benefit-text">Timeline planning for October 2025</span>
-                            </div>
-                            <div class="benefit-item">
-                                <span class="checkmark">✓</span>
-                                <span class="benefit-text">Technical file review</span>
-                            </div>
-                        </div>
-                        
-                        <div class="cta-wrapper">
-                            <a href="https://app.reclaim.ai/m/freds/flexible-quick-meeting" target="_blank" class="consultation-btn" onclick="trackConsultationBooking()">Schedule My Free Consultation</a>
-                            <p class="urgency-text">Book now to secure priority scheduling</p>
-                        </div>
-                    </div>
-                </section>
-                
-                <!-- Contact Info and Quick Form -->
-                <div class="contact-sidebar">
-                    <div class="contact-info">
-                        <h3>Contact Information</h3>
-                        
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <strong>📍 Address</strong>
-                                <p>500 S Main St<br>Mooresville, NC 28115<br><small>Charlotte Metro Area</small></p>
-                            </div>
-                            <div class="contact-item phone-highlight">
-                                <strong>📞 Call Us Today</strong>
-                                <p class="phone-number"><a href="tel:+19802885123" onclick="trackPhoneCall()">980.288.5123</a></p>
-                                <small>We respond within 4 hours</small>
-                            </div>
-                            <div class="contact-item">
-                                <strong>✉️ Email</strong>
-                                <p><a href="mailto:info@peppermodern.com">info@peppermodern.com</a></p>
-                                <small>For project files and detailed inquiries</small>
-                            </div>
-                            <div class="contact-item">
-                                <strong>⏰ Business Hours</strong>
-                                <p>Monday - Friday: 7:00 AM - 5:00 PM<br>
-                                Saturday: 8:00 AM - 2:00 PM<br>
-                                Sunday: Closed</p>
-                                <small>Same-day quote response during business hours</small>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-methods">
-                            <h4>How to Reach Us</h4>
-                            <div class="contact-method-grid">
-                                <div class="method-item">
-                                    <span class="method-icon">📱</span>
-                                    <div class="method-info">
-                                        <strong>Call for Immediate Help</strong>
-                                        <p>Quick questions and urgent projects</p>
-                                    </div>
-                                </div>
-                                <div class="method-item">
-                                    <span class="method-icon">📧</span>
-                                    <div class="method-info">
-                                        <strong>Email for Project Files</strong>
-                                        <p>Send CAD files, drawings, specifications</p>
-                                    </div>
-                                </div>
-                                <div class="method-item">
-                                    <span class="method-icon">📅</span>
-                                    <div class="method-info">
-                                        <strong>Book Consultation</strong>
-                                        <p>30-minute planning session</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Business Categories -->
-                    <div class="business-categories">
-                        <h3>Our Services</h3>
-                        <div class="category-tags">
-                            <span class="category-tag">Cabinet Maker</span>
-                            <span class="category-tag">CNC Machining Service</span>
-                            <span class="category-tag">Woodworking Service</span>
-                            <span class="category-tag">Custom Millwork</span>
-                            <span class="category-tag">Edge Banding Service</span>
-                        </div>
-                        <p class="category-description">Professional CNC cabinet cutting and manufacturing services for contractors throughout the Charlotte metro area.</p>
-                    </div>
-                    
-                    <!-- Enhanced Contact Form -->
-                    <div class="quick-contact">
-                        <h3>Project Inquiry</h3>
-                        <p>Ready to get started? Tell us about your project or <strong><a href="tel:+19802885123" onclick="trackPhoneCall()">call us at 980.288.5123</a></strong></p>
-                        
-                        <form class="contact-form" id="quickContactForm" onsubmit="trackFormSubmission('project_inquiry')">
-                            <div class="form-group">
-                                <label for="quickName">Name *</label>
-                                <input type="text" id="quickName" name="quickName" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="quickEmail">Email *</label>
-                                <input type="email" id="quickEmail" name="quickEmail" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="projectType">Project Type *</label>
-                                <select id="projectType" name="projectType" required>
-                                    <option value="">Select your project type...</option>
-                                    <option value="kitchen-cabinets">Kitchen Cabinets</option>
-                                    <option value="bathroom-vanities">Bathroom Vanities</option>
-                                    <option value="custom-millwork">Custom Millwork</option>
-                                    <option value="commercial-project">Commercial Project</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="timeline">Timeline</label>
-                                <select id="timeline" name="timeline">
-                                    <option value="">When do you need this completed?</option>
-                                    <option value="asap">ASAP</option>
-                                    <option value="1-3-months">1-3 months</option>
-                                    <option value="3-6-months">3-6 months</option>
-                                    <option value="october-2025">Planning for October 2025+</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="budgetRange">Budget Range (Optional)</label>
-                                <select id="budgetRange" name="budgetRange">
-                                    <option value="">Select budget range...</option>
-                                    <option value="under-5k">Under $5,000</option>
-                                    <option value="5k-15k">$5,000 - $15,000</option>
-                                    <option value="15k-plus">$15,000+</option>
-                                    <option value="request-quote">Request Custom Quote</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="projectFiles">Upload Plans/Sketches (Optional)</label>
-                                <input type="file" id="projectFiles" name="projectFiles" multiple accept=".pdf,.jpg,.jpeg,.png,.dwg,.dxf" class="file-upload">
-                                <small>Accepted formats: PDF, JPG, PNG, DWG, DXF (Max 10MB per file)</small>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="quickMessage">Project Details *</label>
-                                <textarea id="quickMessage" name="quickMessage" rows="4" placeholder="Tell us about your project requirements, measurements, special considerations, etc." required></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-secondary">Send Project Inquiry</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Service Areas Section -->
-    <section class="service-areas">
-        <div class="container">
-            <div class="section-header">
-                <h2>Service Areas: Charlotte Metro & Lake Norman Region</h2>
-                <p>Professional CNC cabinet cutting Mooresville NC and custom cabinet parts Charlotte services throughout the greater Charlotte metro area</p>
-            </div>
-            
-            <div class="service-area-grid">
-                <div class="primary-service-area">
-                    <h3>Primary Service Area</h3>
-                    <div class="location-list">
-                        <div class="location-item">
-                            <span class="location-icon">📍</span>
-                            <div class="location-info">
-                                <h4>Mooresville, NC</h4>
-                                <p>Home base - CNC cabinet cutting Mooresville NC with same-day pickup available</p>
-                            </div>
-                        </div>
-                        <div class="location-item">
-                            <span class="location-icon">🏙️</span>
-                            <div class="location-info">
-                                <h4>Charlotte Metro Area</h4>
-                                <p>Custom cabinet parts Charlotte delivery and contractor services throughout the metro</p>
-                            </div>
-                        </div>
-                        <div class="location-item">
-                            <span class="location-icon">🌊</span>
-                            <div class="location-info">
-                                <h4>Lake Norman Region</h4>
-                                <p>Lake Norman area cabinet manufacturing with convenient delivery options</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="extended-service-area">
-                    <h3>Cities We Serve</h3>
-                    <div class="cities-grid">
-                        <div class="city-item">Cornelius</div>
-                        <div class="city-item">Davidson</div>
-                        <div class="city-item">Huntersville</div>
-                        <div class="city-item">Statesville</div>
-                        <div class="city-item">Concord</div>
-                        <div class="city-item">Kannapolis</div>
-                    </div>
-                    <div class="service-radius">
-                        <p><strong>Service Radius:</strong> 50+ miles from Mooresville</p>
-                        <p>Locally owned and operated, serving contractors throughout the Charlotte metro since our founding. We understand the unique needs of North Carolina contractors and deliver precision CNC cabinet cutting services with unmatched turnaround times.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lead Magnet Section -->
-    <section class="lead-magnets">
-        <div class="container">
-            <div class="section-header">
-                <h2>Free Resources for Contractors</h2>
-                <p>Get instant access to our professional tools and guides to help plan your cabinet projects</p>
-            </div>
-            
-            <div class="lead-magnet-grid">
-                <div class="lead-magnet-card">
-                    <div class="lead-icon">
-                        <span>🧮</span>
-                    </div>
-                    <h3>Cabinet Project Cost Calculator</h3>
-                    <p>Get instant pricing estimates for your CNC cabinet cutting projects. Input your specs and get accurate cost breakdowns in minutes.</p>
-                    <form class="lead-magnet-form" onsubmit="trackFormSubmission('cost_calculator'); trackLeadMagnetDownload('cost_calculator');">
-                        <input type="email" placeholder="Enter your email for instant access" required>
-                        <button type="submit" class="btn btn-primary">Get Calculator</button>
-                    </form>
-                </div>
-                
-                <div class="lead-magnet-card">
-                    <div class="lead-icon">
-                        <span>📋</span>
-                    </div>
-                    <h3>Cabinet Parts Pricing Guide</h3>
-                    <p>Comprehensive pricing guide covering sheet processing, edge banding, custom millwork, and turnaround times. Perfect for project planning.</p>
-                    <form class="lead-magnet-form" onsubmit="trackFormSubmission('pricing_guide'); trackLeadMagnetDownload('pricing_guide');">
-                        <input type="email" placeholder="Enter your email for free guide" required>
-                        <button type="submit" class="btn btn-primary">Download Guide</button>
-                    </form>
-                </div>
-                
-                <div class="lead-magnet-card">
-                    <div class="lead-icon">
-                        <span>🖼️</span>
-                    </div>
-                    <h3>Sample Portfolio</h3>
-                    <p>See examples of our precision CNC work, cabinet assemblies, and edge banding quality. Perfect for showing clients what's possible.</p>
-                    <form class="lead-magnet-form" onsubmit="trackFormSubmission('sample_portfolio'); trackLeadMagnetDownload('sample_portfolio');">
-                        <input type="email" placeholder="Enter your email for portfolio access" required>
-                        <button type="submit" class="btn btn-primary">View Portfolio</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Future Services Section -->
-    <section class="future-services">
-        <div class="container">
-            <div class="future-services-callout">
-                <div class="callout-icon">
-                    <span>🎨</span>
-                </div>
-                <div class="callout-content">
-                    <h3>Future Services: Professional Spray Finishing</h3>
-                    <p>We're expanding our capabilities to include premium spray-applied finishes! Soon you'll be able to get complete cabinet solutions with clear coat, stain, and paint finishes all in one location.</p>
-                    <div class="callout-benefits">
-                        <span class="benefit-tag">Clear Coat Finishing</span>
-                        <span class="benefit-tag">Custom Stain Colors</span>
-                        <span class="benefit-tag">Professional Paint</span>
-                    </div>
-                    <p class="callout-cta">Interested in spray finishing for your project? <strong>Let us know during your consultation!</strong></p>
-                    <div class="callout-button">
-                        <a href="#contact" class="btn btn-spray-finish">Get Notified When Available</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="map-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Find Our Shop</h2>
-                <p>Visit us at our Mooresville location for consultations and project discussions</p>
-            </div>
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.999999999!2d-80.8201487!3d35.5760812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88515527c5f8134f%3A0xd69d57e82d8a35db!2sPeppermodern!5e0!3m2!1sen!2sus!4v1693234567890!5m2!1sen!2sus"
-                    width="100%" 
-                    height="400" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Peppermodern Location Map">
-                </iframe>
+            <div class="cta-wrapper">
+                <a href="https://app.reclaim.ai/m/freds/flexible-quick-meeting" target="_blank" class="consultation-btn" onclick="trackConsultationBooking()">Schedule My Free Consultation</a>
+                <p class="urgency-text">Book now to secure priority scheduling when we launch</p>
             </div>
         </div>
     </section>
@@ -854,10 +437,10 @@
                     <h3>Peppermodern</h3>
                     <p>Precision CNC Cabinet Milling</p>
                     <p>Mooresville, NC</p>
+                    <p><a href="tel:+19802885123" onclick="trackPhoneCall()">980.288.5123</a></p>
                 </div>
                 <div class="footer-links">
                     <a href="#services">Services</a>
-                    <a href="#pricing">Pricing</a>
                     <a href="#about">About</a>
                     <a href="#contact">Contact</a>
                 </div>
