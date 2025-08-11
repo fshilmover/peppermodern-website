@@ -1,3 +1,25 @@
+// Mobile menu toggle functionality
+function toggleMobileMenu() {
+    const navMenu = document.getElementById('navMenu');
+    const toggleButton = document.querySelector('.mobile-menu-toggle');
+    
+    if (navMenu && toggleButton) {
+        navMenu.classList.toggle('active');
+        toggleButton.classList.toggle('active');
+    }
+}
+
+// Close mobile menu when clicking a nav link
+function closeMobileMenu() {
+    const navMenu = document.getElementById('navMenu');
+    const toggleButton = document.querySelector('.mobile-menu-toggle');
+    
+    if (navMenu && toggleButton) {
+        navMenu.classList.remove('active');
+        toggleButton.classList.remove('active');
+    }
+}
+
 // Image lazy loading handler
 function handleImageLoad() {
     const images = document.querySelectorAll('img[loading="lazy"]');
@@ -29,19 +51,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize image loading
     handleImageLoad();
     // Handle navigation clicks
-    const navLinks = document.querySelectorAll('a[href^="#"]');
+    const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+            // Close mobile menu when clicking any nav link
+            closeMobileMenu();
             
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 70; // Account for fixed nav
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+            // Handle smooth scrolling for hash links
+            const href = this.getAttribute('href');
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(href);
+                
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 70; // Account for fixed nav
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });
