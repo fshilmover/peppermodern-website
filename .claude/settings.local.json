@@ -10,7 +10,15 @@
       "Bash(start file:///C:/Users/freds/peppermodern-website/index.html)",
       "WebFetch(domain:codepen.io)",
       "Bash(git tag:*)",
-      "Bash(start file:///C:/Users/freds/peppermodern-website/about.html)"
+      "Bash(start file:///C:/Users/freds/peppermodern-website/about.html)",
+      "WebFetch(domain:peppermodern.com)",
+      "Bash(netlify:*)",
+      "Bash(npx netlify:*)",
+      "Bash(git submodule:*)",
+      "Bash(cat:*)",
+      "Bash(git rm:*)",
+      "Bash(rm:*)",
+      "Bash(git config:*)"
     ],
     "deny": []
   }

@@ -1,0 +1,78 @@
+# 7 Minute CABS - Git Ignore File
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime Data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Temporary Folders
+tmp/
+temp/
+.tmp/
+
+# Build Output (if using build tools in future)
+dist/
+build/
+.cache/
+
+# Environment Variables (if added later)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependencies (if npm/yarn added later)
+node_modules/
+jspm_packages/
+
+# Coverage Directory Used by Tools like Istanbul
+coverage/
+
+# Windows Image File Caches
+Thumbs.db
+ehthumbs.db
+
+# Folder Config File
+Desktop.ini
+
+# Recycle Bin Used on File Shares
+$RECYCLE.BIN/
+
+# VS Code Settings (project specific)
+.vscode/settings.json
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Backup Files
+*.bak
+*.backup
+*.old

@@ -1,0 +1,29 @@
+{
+  "name": "7minutecabs-website",
+  "version": "4.1.1",
+  "description": "High-energy retro infomercial microsite for A/B testing CNC cabinet marketing approaches",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Open index.html in your browser to view the site locally'",
+    "deploy": "echo 'Push to GitHub main branch to deploy via GitHub Pages'"
+  },
+  "keywords": [
+    "microsite",
+    "a-b-testing",
+    "cnc-cabinets",
+    "retro-design",
+    "infomercial",
+    "landing-page",
+    "peppermodern"
+  ],
+  "author": "Peppermodern CNC Cabinet Manufacturing",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/username/7minutecabs-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/username/7minutecabs-website/issues"
+  },
+  "homepage": "https://7minutecabs.com"
+}
