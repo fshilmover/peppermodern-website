@@ -29,6 +29,21 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Performance optimizations */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
 body {
     font-family: var(--font-primary);
     font-weight: var(--font-weight-normal);
@@ -61,6 +76,7 @@ img {
     display: block;
 }
 
+/* Optimize image loading */
 img[loading="lazy"] {
     opacity: 0;
     transition: opacity 0.3s;
@@ -68,6 +84,22 @@ img[loading="lazy"] {
 
 img[loading="lazy"].loaded {
     opacity: 1;
+}
+
+/* Prevent layout shift */
+img[width][height] {
+    height: auto;
+}
+
+/* WebP support with fallback */
+.webp img {
+    background-image: none;
+}
+
+/* Improve image rendering */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 /* Layout */
