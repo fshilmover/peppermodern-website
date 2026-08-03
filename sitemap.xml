@@ -19,6 +19,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://peppermodern.com/values</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://peppermodern.com/about</loc>
     <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
