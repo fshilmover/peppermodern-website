@@ -2,8 +2,12 @@
 /about    /about.html    200
 /services    /services.html    200
 /contact    /contact.html    200
+/careers    /careers.html    200
+/thanks    /thanks.html    200
 
 # Handle trailing slashes
 /about/    /about.html    200
 /services/    /services.html    200
 /contact/    /contact.html    200
+/careers/    /careers.html    200
+/thanks/    /thanks.html    200
