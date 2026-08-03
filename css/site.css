@@ -1761,6 +1761,13 @@ h1 span {
 .contact-block p,.contact-block a{color:var(--muted);font-size:14.5px}
 .contact-block a:hover{color:var(--blue)}
 
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.gallery figure{border:1px solid var(--rule);background:var(--white);padding:10px 10px 12px;margin:0}
+.gallery img{width:100%;height:320px;object-fit:cover}
+.gallery figcaption{padding-top:10px;font-size:13.5px;color:var(--ink)}
+.gallery figcaption span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--blue);text-transform:uppercase;margin-bottom:4px}
+@media (max-width:640px){.gallery img{height:240px}}
+
 .footer-contact{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--muted)}
 .footer-contact a{color:inherit}
 .footer-contact a:hover{color:var(--blue)}
