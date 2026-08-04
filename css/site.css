@@ -1771,6 +1771,8 @@ h1 span {
 .footer-contact{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--muted)}
 .footer-contact a{color:inherit}
 .footer-contact a:hover{color:var(--blue)}
+.site-footer .footer-contact{grid-column:1/-1;margin-top:4px;font-size:10px;letter-spacing:.12em}
+.pepper-mark{width:38px;height:38px;object-fit:contain;flex:0 0 auto}
 
 .side-doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:26px}
 
