@@ -3,6 +3,9 @@
 /services    /services.html    200
 /contact    /contact.html    200
 /careers    /careers.html    200
+/capabilities    /capabilities.html    200
+/work    /work.html    200
+/bid    /bid.html    200
 /values    /values.html    200
 /thanks    /thanks.html    200
 
@@ -11,4 +14,7 @@
 /services/    /services.html    200
 /contact/    /contact.html    200
 /careers/    /careers.html    200
+/capabilities/    /capabilities.html    200
+/work/    /work.html    200
+/bid/    /bid.html    200
 /thanks/    /thanks.html    200
